@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Support · Fold Diary</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<a class="brand" href="index.html"><img src="icon.png" width="40" height="40" alt=""><span>Fold Diary</span></a>
+<nav aria-label="Language"><p><a href="privacy-en.html">Privacy Policy</a> <span class="cur" aria-current="page">Support</span></p><p class="lang"><a href="support.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a> <a href="support-zh-hans.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a> <span class="cur" aria-current="page">English</span></p></nav>
+</header>
+<main>
+<h1>Fold Diary FAQ</h1>
+<h2>Why isn't my count going up on its own?</h2>
+<p>Fold Diary can't detect opens by itself. Automatic logging comes from one automation in the Shortcuts app that runs "Log an Open" every time your iPhone Duo opens.</p>
+<p>If there's a small note under today's number saying "Not logging on its own yet", no automatic log has come in yet. Tap "Set Up →" and follow the steps.</p>
+<p>If you've set it up and it still doesn't count, it's usually one of these:</p>
+<ul><li>The trigger isn't "iPhone Is Opened".</li><li>"Run Immediately" is off, so it waits for you to confirm.</li><li>The action isn't "Log an Open".</li><li>The automation is switched off. Open it in the Automation list and make sure it's on.</li></ul>
+<p>After fixing it, run the setup guide again. Its last page, "One Last Test", asks you to close your iPhone Duo and open it again, then tells you whether that open was logged. The Automatic Logging section on the app's main screen also shows when the last automatic log came in.</p>
+<h2>How do I set up the Shortcuts automation?</h2>
+<p>The guide opens on its own the first time you launch the app. To see it again, go to Automatic Logging on the app's main screen and tap "How to set up automatic logging". The steps:</p>
+<ol><li>Open the Shortcuts app.</li><li>Tap "Automation" at the bottom.</li><li>Tap "+" in the top-right corner to add one.</li><li>Scroll down and pick "iPhone Is Opened".</li><li>Choose "Run Immediately" and turn off "Notify When Run".</li><li>Tap "Next" → "New Blank Automation" → "Add Action", search for "Log an Open", and tap it.</li><li>Tap "Done" in the top-right corner.</li></ol>
+<p>The app can't create the automation for you, so you do this once. It takes about a minute.</p>
+<h2>Why do I get a notification, or have to confirm, every time I open it?</h2>
+<p>In Shortcuts → Automation, open the automation and check that "Run Immediately" is selected and "Notify When Run" is off. "Log an Open" itself never opens the app.</p>
+<h2>My widget isn't showing the latest count.</h2>
+<p>The app asks the widget to redraw after every log, but iOS limits how often an app can refresh its widgets in the background each day, and Apple doesn't publish the exact number. On a day with lots of opens, the widget may lag a bit. The count inside the app is always current.</p>
+<p>The midnight reset is scheduled ahead of time, so it isn't affected by that limit. If the widget stays stuck on one number for a long time, try removing it from the Home Screen and adding it back.</p>
+<h2>How do I fix a wrong count?</h2>
+<p>Scroll down to Fix a Count on the app's main screen. Tap the date to pick another day (today or earlier), then use − or +. A day can't go below zero.</p>
+<p>Manual fixes are stored separately from automatic logs. In Day by Day you can see how many of a day's opens were logged by the app and how many were added or removed by hand.</p>
+<h2>What happens to my data when I get a new phone?</h2>
+<p>Your data is stored only on this iPhone. The app has no cloud sync and no export.</p>
+<p>If you back up the whole iPhone to iCloud or a computer and restore it onto the new iPhone, your counts may come along. Open the app after restoring to check. Also look in Shortcuts → Automation to make sure the automation is still there, and set it up again if it isn't.</p>
+<p>Deleting the app deletes your data, and it can't be recovered.</p>
+<h2>Does it work on other iPhone models?</h2>
+<p>You can install it, but it's made for iPhone Duo. An iPhone that doesn't fold never opens, so there's nothing to log automatically. Only Fix a Count will be useful.</p>
+<h2>What is Import History for?</h2>
+<p>It's for people who were already logging opens with their own shortcut into a text file called <code>duo_history.txt</code>, so they can bring those old counts in. Most people won't need it.</p>
+<ul><li>Each block starts with a date line such as "2026年11月4日 04:00", followed by lines that say <code>open</code>.</li><li>Each block counts toward the day before its date.</li><li>If the app also logged that day, the larger number wins, so nothing is counted twice, not even if you import again.</li><li>Clear Imported Data removes everything you imported. Counts the app logged itself stay put.</li></ul>
+<h2>Contact</h2>
+<p>Still stuck? Email SUPPORT_EMAIL_PLACEHOLDER.<br>
+Including your iPhone model, iOS version and a screenshot helps us find the cause faster.</p>
+</main>
+</body>
+</html>

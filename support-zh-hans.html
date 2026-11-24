@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>支持 · 铰链日记</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<a class="brand" href="index.html"><img src="icon.png" width="40" height="40" alt=""><span>铰链日记</span></a>
+<nav aria-label="语言"><p><a href="privacy-zh-hans.html">隐私政策</a> <span class="cur" aria-current="page">支持</span></p><p class="lang"><a href="support.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a> <span class="cur" aria-current="page">简体中文</span> <a href="support-en.html" lang="en" hreflang="en">English</a></p></nav>
+</header>
+<main>
+<h1>铰链日记・常见问题</h1>
+<h2>为什么次数没有自己增加？</h2>
+<p>铰链日记本身不检测开合，自动记录靠的是“快捷指令”App 里的一个自动化：iPhone Duo 每打开一次，就运行一次“记录一次开合”。</p>
+<p>如果 App 首页今天的数字下面有一张“还没开始自动记录”的小便签，说明还没收到过任何一笔自动记录，点“去设置 →”照着步骤做就行。</p>
+<p>已经设置了还是不动，常见原因有这几个：</p>
+<ul><li>触发条件选的不是“iPhone 已打开时”。</li><li>没选“立即运行”，所以每次都在等你确认。</li><li>加进去的操作不是“记录一次开合”。</li><li>自动化被关掉了：在“自动化”列表里点开它，确认是开启的。</li></ul>
+<p>改好以后可以在 App 里重新走一遍设置引导，最后一页“最后，试一次”会让你把 iPhone Duo 合上再打开，当场告诉你有没有记上。App 首页“自动记录”那一栏也会显示“最近一次自动记录”的时间。</p>
+<h2>快捷指令自动化怎么设置？</h2>
+<p>第一次打开 App 时会自动弹出引导；以后想再看，到App 首页“自动记录”点“怎么设置自动记录”。步骤如下：</p>
+<ol><li>打开“快捷指令”App。</li><li>点底部的“自动化”。</li><li>点右上角的“＋”，新建一个自动化。</li><li>往下找到“iPhone 已打开时”，点它。</li><li>选“立即运行”，并把“运行时通知”关掉。</li><li>点“下一步”→“新建空白自动化”→“添加操作”，搜索“记录一次开合”，点它加进来。</li><li>点右上角的“完成”。</li></ol>
+<p>App 没办法替你创建自动化，只能请你照着做一次，大约一分钟。</p>
+<h2>为什么每次打开都弹通知，或者要我点确认？</h2>
+<p>到“快捷指令”→“自动化”点开那个自动化，确认选的是“立即运行”，并且“运行时通知”是关着的。“记录一次开合”本身不会打开 App。</p>
+<h2>桌面小组件的数字没更新？</h2>
+<p>每记一笔，App 都会通知小组件刷新，但 iOS 对 App 在后台刷新小组件有每日次数限制（Apple 没有公布具体数字）。一天开合次数很多时，小组件可能会晚一些才跟上。打开 App 看到的一定是最新的数字。</p>
+<p>半夜十二点清零是提前排好的，不受这个限制影响。如果小组件很久都停在同一个数字，可以试试把它从桌面移除再重新添加。</p>
+<h2>次数记错了怎么改？</h2>
+<p>App 首页往下滑到“手动修正”。点日期可以换一天（只能选今天或之前），再按“−”或“＋”调整，最少减到 0。</p>
+<p>手动修正和自动记录是分开保存的，在“每一天”列表里能看到某天有几次是 App 记的、几次是手动改的。</p>
+<h2>换新手机了，数据怎么办？</h2>
+<p>数据只保存在这台 iPhone 上，App 没有云同步，也没有导出功能。</p>
+<p>用 iCloud 或电脑备份整台 iPhone、再恢复到新 iPhone 上，数据可能会一起过去；恢复后先打开 App 看看数字对不对。也请到“快捷指令”的“自动化”里确认那个自动化还在，不在的话按上面的步骤重新建一个。</p>
+<p>直接删除 App，数据会一起删除，无法找回。</p>
+<h2>其他 iPhone 能用吗？</h2>
+<p>能装，但这个 App 是为 iPhone Duo 做的。普通 iPhone 不会开合，自动记录也就没什么可记，只有“手动修正”能用。</p>
+<h2>“导入历史”是干什么的？</h2>
+<p>给以前已经用自己的快捷指令、把每次开合记在 <code>duo_history.txt</code> 文本文件里的人，用来把旧记录搬进来。大多数人用不上。</p>
+<ul><li>格式是一行日期（例如“2026年11月4日 04:00”），下面跟几行 <code>open</code>。</li><li>每一段的次数算在“日期减一天”那天。</li><li>同一天 App 也有记录的话，取较大的那个，不会重复相加；重复导入也不会。</li><li>导入的部分可以用“清除导入数据”一次删掉，App 自己记的次数不受影响。</li></ul>
+<h2>联系我们</h2>
+<p>还有问题，请发邮件到：SUPPORT_EMAIL_PLACEHOLDER<br>
+来信时附上 iPhone 型号、iOS 版本和问题截图，能更快找到原因。</p>
+</main>
+</body>
+</html>

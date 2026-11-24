@@ -1,0 +1,24 @@
+:root{--bg:#EBE3D3;--fg:#1F3A2E;--accent:#B5432E;--muted:#4d6258;--rule:#cfc4ae;--code:#e0d6c1}
+@media (prefers-color-scheme:dark){:root{--bg:#18211c;--fg:#E4DCC8;--accent:#E0735C;--muted:#a9b3a6;--rule:#35443b;--code:#26332b}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.85 "Songti TC","Songti SC","Noto Serif CJK TC","New York",Georgia,serif}
+:lang(en){font-family:"New York",Georgia,"Times New Roman",serif;line-height:1.7}
+.top,main{max-width:680px;margin:0 auto;padding-left:20px;padding-right:20px}
+.top{padding-top:24px;padding-bottom:16px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--fg);text-decoration:none;font-weight:700;font-size:1.1rem}
+.brand img{border-radius:9px;display:block}
+nav p{margin:.6rem 0 0;font-size:.9rem;line-height:1.6;color:var(--muted)}
+nav a{margin-right:.6em}
+nav .cur{color:var(--fg);font-weight:700;margin-right:.6em}
+a{color:var(--accent);text-underline-offset:3px}
+main{padding-top:12px;padding-bottom:64px}
+h1{font-size:1.6rem;line-height:1.4;margin:1.6rem 0 .6rem}
+h2{font-size:1.15rem;line-height:1.5;margin:2rem 0 .3rem;color:var(--accent)}
+p{margin:.6rem 0}
+ul,ol{padding-left:1.4em;margin:.6rem 0}
+li{margin:.25rem 0}
+code{font:.9em ui-monospace,Menlo,monospace;background:var(--code);padding:.05em .35em;border-radius:3px}
+.home section{border-top:1px solid var(--rule);padding:.8rem 0}
+.home section:first-child{border-top:0}
+.home h2{margin:1rem 0 0}

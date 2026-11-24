@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>支援 · 鉸鏈日記</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<a class="brand" href="index.html"><img src="icon.png" width="40" height="40" alt=""><span>鉸鏈日記</span></a>
+<nav aria-label="語言"><p><a href="privacy.html">隱私權政策</a> <span class="cur" aria-current="page">支援</span></p><p class="lang"><span class="cur" aria-current="page">繁體中文</span> <a href="support-zh-hans.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a> <a href="support-en.html" lang="en" hreflang="en">English</a></p></nav>
+</header>
+<main>
+<h1>鉸鏈日記・常見問題</h1>
+<h2>為什麼次數沒有自己增加？</h2>
+<p>鉸鏈日記本身不會偵測開合，自動記錄要靠「捷徑」App 裡的一個自動化，每打開一次 iPhone Duo 就執行一次「記錄一次開合」。</p>
+<p>如果 App 首頁今天的數字底下有一張「還沒開始自動記錄」的小便條，代表還沒有收到過任何一筆自動記錄，點「去設定 →」照步驟做就好。</p>
+<p>已經設了還是不會動，通常是這幾個原因：</p>
+<ul><li>觸發條件選的不是「iPhone 已打開時」。</li><li>沒選「立即執行」，所以每次都在等你按確認。</li><li>加進去的動作不是「記錄一次開合」。</li><li>自動化被關掉了：在「捷徑」的「自動化」列表點開它，確認是開啟的。</li></ul>
+<p>改完之後可以在 App 裡重跑一次設定引導，最後一頁「最後，試一次」會請你把 iPhone Duo 合上再打開，當場告訴你有沒有記到。App 首頁「自動記錄」那一區也會顯示「最近一次自動記錄」的時間。</p>
+<h2>捷徑自動化要怎麼設定？</h2>
+<p>App 第一次打開時會自己跳出引導；之後想再看，到App 首頁「自動記錄」點「怎麼設定自動記錄」。步驟是：</p>
+<ol><li>打開「捷徑」App。</li><li>點下方的「自動化」。</li><li>點右上角的「＋」，新增一個自動化。</li><li>往下找到「iPhone 已打開時」，點它。</li><li>選「立即執行」，並把「執行時通知」關掉。</li><li>點「下一步」→「新增空白自動化」→「加入動作」，搜尋「記錄一次開合」，點它加進來。</li><li>點右上角的「完成」。</li></ol>
+<p>App 沒辦法替你建自動化，只能請你照著做一次，大約一分鐘。</p>
+<h2>為什麼每次打開都會跳通知，或要我按確認？</h2>
+<p>到「捷徑」→「自動化」點開那個自動化，確認選的是「立即執行」，而且「執行時通知」是關掉的。「記錄一次開合」本身不會打開 App。</p>
+<h2>桌面小工具的數字沒更新？</h2>
+<p>每記一筆，App 都會請小工具重畫，但 iOS 對 App 在背景更新小工具有每天的次數限制（Apple 沒有公布確切數字）。一天開合很多次時，小工具可能會晚一點才跟上。打開 App 看到的一定是最新的數字。</p>
+<p>半夜十二點歸零是事先排好的，不受這個限制影響。如果小工具停在同一個數字很久都不動，可以試試把它從桌面移除再加回去。</p>
+<h2>次數記錯了，要怎麼改？</h2>
+<p>App 首頁往下捲到「手動修正」。點日期可以換一天（只能選今天或以前），再按「−」或「＋」調整，最少減到 0。</p>
+<p>手動修正和自動記錄是分開存的，在「每一天」列表裡可以看到某一天有幾次是 App 記的、幾次是手動改的。</p>
+<h2>換新手機，資料怎麼辦？</h2>
+<p>資料只存在這支 iPhone 裡，App 沒有雲端同步，也沒有匯出功能。</p>
+<p>用 iCloud 備份或電腦備份整支 iPhone、再還原到新的 iPhone，資料可能會跟著過去；還原後先打開 App 看一下數字對不對。也請到「捷徑」的「自動化」確認那個自動化還在，不在的話照上面的步驟再建一次。</p>
+<p>直接刪掉 App，資料會一起刪除，沒辦法找回。</p>
+<h2>其他 iPhone 可以用嗎？</h2>
+<p>可以安裝，但這個 App 是為 iPhone Duo 做的。一般 iPhone 不會開合，自動記錄也就沒東西可記，只剩「手動修正」能用。</p>
+<h2>「匯入歷史」是做什麼的？</h2>
+<p>給以前已經用自己的捷徑，把每次開合記在 <code>duo_history.txt</code> 文字檔裡的人，把舊紀錄搬進來。大部分人用不到。</p>
+<ul><li>格式是一行日期（例如「2026年11月4日 04:00」），底下接幾行 <code>open</code>。</li><li>每一段的次數會算在「日期減一天」那天。</li><li>同一天如果 App 也有記錄，取比較大的那個，不會重複相加；重複匯入也不會。</li><li>匯入的部分可以用「清除匯入資料」整批刪掉，App 自己記的次數不受影響。</li></ul>
+<h2>聯絡我們</h2>
+<p>還有問題，請寫信到：SUPPORT_EMAIL_PLACEHOLDER<br>
+寫信時附上 iPhone 型號、iOS 版本，和問題的截圖，會比較快找到原因。</p>
+</main>
+</body>
+</html>
